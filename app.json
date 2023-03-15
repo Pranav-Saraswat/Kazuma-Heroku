@@ -1,0 +1,53 @@
+{
+    "name": "Kazuma",
+    "description": "Telegram bot which steals stickers and packs and stores them in your own custom packs.",
+    "keywords": [
+       "telegram",
+       "anime",
+       "Scenario",
+       "Powerful",
+       "group",
+       "manager"
+    ],
+ "stack": "container",   
+ "repository": "https://github.com/Pranav-Saraswat/PratheekBC",
+ "addons": [
+        {
+       "options": {
+          "version": "12"
+       },
+       "plan": "heroku-postgresql"
+    }
+ ],
+ "env": {
+    "BOT_TOKEN": {
+       "description": "Your bot token. Get one from @BotFather",
+       "required": true,
+       "value": ""
+    },
+    "DATABASE": {
+       "description": "Get elephant postgre url from elephantsql.com",
+       "required": true,
+       "value": "kazuma.db"
+    },
+    "SUDOLIST": {
+       "description": "Get your own user id from @missrose_bot /id",
+       "required": true,
+       "value": ""
+    }
+},
+"buildpacks": [
+    {
+        "url": "heroku/python"
+    },
+    {
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+],
+"formation": {
+    "worker": {
+        "quantity": 1,
+        "size": "eco" 
+    }
+  }
+}
