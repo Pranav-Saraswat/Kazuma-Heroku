@@ -1,5 +1,5 @@
 import os
-import config
+from config import *
 import cv2
 import math
 import json
@@ -443,14 +443,9 @@ def help(update, context):
 
 if __name__ == "__main__":
     try:
-        SUDOLIST = config("SUDOLIST")
-        BOT_TOKEN = config("BOT_TOKEN")
-        DATABASE = config("DATABASE")
-        
+       updater = Updater(BOT_TOKEN, use_context=True)
     except:
-        config = {"DATABASE": "database-name.db", "BOT_TOKEN": "bot-token-here", "SUDOLIST": [12345678, 87654321]}
-
-    updater = Updater(BOT_TOKEN, use_context=True)
+		print("Somethng went wrong")
     os.system("title "+ Bot(BOT_TOKEN).first_name)
     logging.basicConfig(format='\n\n%(levelname)s\n%(asctime)s\n%(name)s\n%(message)s', level=logging.ERROR)
 
