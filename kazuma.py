@@ -137,7 +137,7 @@ def stealpack(update, context):
     useridhash = hashlib.sha1(bytearray(user.id)).hexdigest()
     packnamehash = hashlib.sha1(bytearray(packname.lower().encode('utf-8'))).hexdigest()
     packid = f'K{packnamehash[:10]}{useridhash[:10]}_by_{context.bot.username}'
-    
+    print(msg.reply_to_message.sticker)
     if msg.reply_to_message.sticker.is_animated:
         ext = 'tgs'
     elif msg.reply_to_message.sticker.is_video:
@@ -445,7 +445,7 @@ if __name__ == "__main__":
     try:
        updater = Updater(BOT_TOKEN, use_context=True)
     except:
-		print("Somethng went wrong")
+       print("Somethng went wrong")
     os.system("title "+ Bot(BOT_TOKEN).first_name)
     logging.basicConfig(format='\n\n%(levelname)s\n%(asctime)s\n%(name)s\n%(message)s', level=logging.ERROR)
 

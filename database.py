@@ -1,7 +1,6 @@
 import sqlite3, json, os, config
+from config import DATABASE
 
- 
-DATABASE = config('DATABASE')
 
 NEW_PACK = """INSERT OR IGNORE INTO packdb (pid, uid, def, name)
 VALUES ("{}", {}, {}, "{}");"""

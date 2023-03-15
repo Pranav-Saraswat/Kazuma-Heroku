@@ -1,5 +1,4 @@
 opencv-python
 Pillow
 pyffmpeg
-python-telegram-bot
-dotenv
+python-telegram-bot==13.3
