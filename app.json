@@ -11,14 +11,6 @@
     ],
  "stack": "container",   
  "repository": "https://github.com/Pranav-Saraswat/PratheekBC",
- "addons": [
-        {
-       "options": {
-          "version": "12"
-       },
-       "plan": "heroku-postgresql"
-    }
- ],
  "env": {
     "BOT_TOKEN": {
        "description": "Your bot token. Get one from @BotFather",

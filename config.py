@@ -5,4 +5,4 @@ from os import getenv
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 SUDOLIST = list(map(int, getenv("SUDOLIST", "1382938444 1154075796").split()))
-DATABASE = getenv("DATABASE", "database-name.db")
+DATABASE = getenv("DATABASE", "kazuma.db")
